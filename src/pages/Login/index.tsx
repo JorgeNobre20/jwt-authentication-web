@@ -12,8 +12,8 @@ const Login: React.FC = () => {
         <Container>
             <Form title="Faça login para ter acesso ao UpPost">
 
-                <Input placeholder="E-mail" /> 
-                <Input placeholder="Senha" /> 
+                <Input placeholder="E-mail" type="email" required /> 
+                <Input placeholder="Senha" type="password" required /> 
 
                 <Button variant="button" label="Login" />
                 <Button variant="link">

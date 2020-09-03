@@ -7,4 +7,8 @@ export const Container = styled.main`
     width: 100%;
     justify-content: center;
     align-items: center;
+
+    > form {
+        width: 500px;
+    }
 `;
