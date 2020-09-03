@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
         --sign-button-background: #F92F2F;
         --text-color: #787878;
         --placeholder-text-color: #ADADAD;
-        --input-background-color: #F4F4F4;
+        --input-background-color: #f1f1f10f;
         --input-border-color: #F4F4F4;
     }
 
@@ -22,6 +22,13 @@ const GlobalStyles = createGlobalStyle`
     body {
         width: 100%;
         background: var(--primary-color);
+    }
+
+    input, button, a{
+        text-decoration: none;
+        outline: none;
+        border: none;
+        background: none;
     }
 `;
 
