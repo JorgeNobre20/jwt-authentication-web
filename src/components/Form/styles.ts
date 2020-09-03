@@ -6,10 +6,11 @@ export const FormContainer = styled.form`
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    min-width: 400px;
+    width: 400px;
     background: #FFFFFF;
     justify-content: center;
     border-radius: 3px;
+
 
     > img {
         height: 2.5rem;
@@ -28,4 +29,14 @@ export const FormContainer = styled.form`
     button:last-child{
         margin-bottom: 2rem;
     }
+
+    @media only screen and (max-width: 525px){
+        max-width: 90%;
+        width: 90%;
+
+        > p{
+            font-size: 0.8rem;
+        }
+    }
+
 `;

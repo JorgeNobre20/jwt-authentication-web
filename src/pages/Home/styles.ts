@@ -64,6 +64,16 @@ export const MainContent = styled.div`
         }
     }
 
+    @media only screen and (max-width: 400px){
+        width: 90%;
+
+        > img {
+            height: 2rem;
+            width: auto;
+            margin: 2rem 0rem;
+        }
+    }
+
 `;
 
 export const UserList = styled.div`
@@ -78,5 +88,9 @@ export const UserList = styled.div`
         color: #888888;
         text-align: center;
         margin: 1rem 0;
+    }
+
+    @media only screen and (max-width: 400px){
+        width: 90%;
     }
 `;
