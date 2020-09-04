@@ -32,7 +32,7 @@ const AuthProvider: React.FC = ({ children }) => {
     );
 }
 
-export const userAuth = (): IAuthContextData => {
+export const useAuth = (): IAuthContextData => {
     const context = useContext(AuthContext);
     return context;
 }
