@@ -6,7 +6,7 @@ const AppRoute: React.FC<RouteProps> = (props) => {
     
     const { signed } = useAuth();
 
-    return !signed ? <Redirect to={{ pathname: "/login" }} /> : <Route {...props} />
+    return signed ? <Route {...props} /> : <Redirect to={{ pathname: "/login" }} /> 
 
 }
 

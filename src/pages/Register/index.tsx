@@ -7,11 +7,14 @@ import Button from "../../components/Button";
 import Form from "../../components/Form";
 import Input from "../../components/Input";
 import api from "../../services/api";
+
 import { LoginResponse } from "../Login/Login";
+import { useAuth } from "../../contexts/AuthenticationContext";
 
 const Register: React.FC = () => {
 
     const history = useHistory();
+    const { signIn } = useAuth();
 
     const nameInputRef = useRef<HTMLInputElement>(null);
     const lastNameInputRef = useRef<HTMLInputElement>(null);
@@ -47,6 +50,7 @@ const Register: React.FC = () => {
                 });
 
                 localStorage.setItem("ud",ud);
+                signIn();
                 history.push("/");
 
             }catch(err){

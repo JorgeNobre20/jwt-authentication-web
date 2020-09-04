@@ -8,10 +8,12 @@ import Input from "../../components/Input";
 import api from "../../services/api";
 
 import { LoginResponse } from "./Login";
+import { useAuth } from "../../contexts/AuthenticationContext";
 
 const Login: React.FC = () => {
 
     const history = useHistory();
+    const { signIn } = useAuth();
 
     const emailInputRef = useRef<HTMLInputElement>(null);
     const passwordInputRef = useRef<HTMLInputElement>(null);
@@ -36,12 +38,16 @@ const Login: React.FC = () => {
                 });
 
                 localStorage.setItem("ud",ud);
+                signIn();
+                
                 history.push("/");
 
             }catch(err){
                 
-                const error = err.response.data;
-                alert(error.message);
+                const error = err.response.data.message;
+                if(error){
+                    alert(error);
+                }
                 
             }   
 
