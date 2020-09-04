@@ -1,12 +1,14 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 import { InputProps } from "./Input";
 import { InputContainer } from "./styles";
 
-const Input: React.FC<InputProps> = ({ ...props }) => {
+const Input: React.RefForwardingComponent<HTMLInputElement,InputProps> = ({ ...rest }, ref) => {
+
     return (
-        <InputContainer {...props} />
+        <InputContainer ref={ref} {...rest} />
     );
+
 }
 
-export default Input;
+export default forwardRef(Input);
