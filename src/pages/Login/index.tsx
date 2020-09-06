@@ -44,9 +44,9 @@ const Login: React.FC = () => {
 
             }catch(err){
                 
-                const error = err.response.data.message;
+                const error = err.response;
                 if(error){
-                    alert(error);
+                    alert(error.data.message);
                 }
                 
             }   

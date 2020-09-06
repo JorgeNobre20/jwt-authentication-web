@@ -55,8 +55,10 @@ const Register: React.FC = () => {
 
             }catch(err){
                 
-                const error = err.response.data;
-                alert(error.message);
+                const error = err.response;
+                if(error){
+                    alert(error.data.message);
+                }
                 
             }
 
