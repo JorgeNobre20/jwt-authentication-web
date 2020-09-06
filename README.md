@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="github/Home.jpg" margin="30" width="auto" height="320" alt="Home" />
+  <img src="github/MainImage.jpg" margin="30" width="auto" height="320" alt="Home" />
 </div>
 
 <h2 align="center" margin="20">Autenticação JWT - React JS</h2>
